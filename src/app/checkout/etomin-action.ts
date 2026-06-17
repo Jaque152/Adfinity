@@ -3,14 +3,46 @@
 import { Resend } from "resend";
 
 const ETOMIN_BASE_URL = "https://pagos.etomin.com/api/v1";
-const ETOMIN_EMAIL = process.env.ETOMIN_EMAIL ;
-const ETOMIN_PASSWORD = process.env.ETOMIN_PASSWORD ;
+const ETOMIN_EMAIL = process.env.ETOMIN_EMAIL || "tu_correo_etomin@ejemplo.com";
+const ETOMIN_PASSWORD = process.env.ETOMIN_PASSWORD || "tu_contraseña_etomin";
 
 // Configuración de Resend
 const resend = new Resend(process.env.RESEND_API_KEY);
-const adminEmail = "contacto@adfinity.com.mx";
+const adminEmail = process.env.ADMIN_EMAIL || "contacto@trazocreative.com";
+const senderEmail = process.env.SENDER_EMAIL || "envios@trazocreative.com";
 
-export async function processEtominPayment(data: any) {
+// 1. Definimos la forma estricta de los datos (Reemplazando a los 'any')
+export interface CartItemPayload {
+  name: string;
+  price: number;
+  qty: number;
+  sku: string;
+}
+
+export interface EtominPaymentPayload {
+  amount: number;
+  billing: {
+    firstName: string;
+    lastName: string;
+    country: string;
+    address: string;
+    city: string;
+    zip: string;
+    phone: string;
+    email: string;
+  };
+  cardData: {
+    cardName: string;
+    cardNumber: string;
+    expMonth: string;
+    expYear: string;
+    cvc: string;
+  };
+  items: CartItemPayload[];
+}
+
+// 2. Aplicamos la interfaz al parámetro principal
+export async function processEtominPayment(data: EtominPaymentPayload) {
   try {
     // 1. SIGN IN (Obtener Token de Autenticación)
     const signinRes = await fetch(`${ETOMIN_BASE_URL}/signin`, {
@@ -70,13 +102,14 @@ export async function processEtominPayment(data: any) {
         cardNumberToken: cardTokenData.cardNumberToken,
         cvv: data.cardData.cvc,
       },
-      items: data.items.map((item: any) => ({
+      // Aplicamos la interfaz aquí también
+      items: data.items.map((item: CartItemPayload) => ({
         title: item.name,
         amount: item.price,
         quantity: item.qty,
         id: item.sku,
       })),
-      redirectUrl: "https://adfinity.com/checkout"
+      redirectUrl: "https://trazocreative.com/checkout"
     };
 
     const saleRes = await fetch(`${ETOMIN_BASE_URL}/sale`, {
@@ -93,8 +126,8 @@ export async function processEtominPayment(data: any) {
     // 4. SI EL PAGO ES EXITOSO, ENVIAR CORREOS
     if (saleData.status === "APPROVED" || saleData.status === "PENDING") {
       
-      // Generar lista de productos en HTML
-      const itemsHtml = data.items.map((item: any) => `
+      // Aplicamos la interfaz en el map de los items HTML
+      const itemsHtml = data.items.map((item: CartItemPayload) => `
         <tr>
           <td style="padding: 10px; border-bottom: 1px solid #eee;">${item.name} <br/> <small style="color: #666;">SKU: ${item.sku}</small></td>
           <td style="padding: 10px; border-bottom: 1px solid #eee; text-align: center;">${item.qty}</td>
@@ -107,7 +140,7 @@ export async function processEtominPayment(data: any) {
 
       // Correo para Administrador
       const adminOrderEmail = resend.emails.send({
-        from: `Adfinity Pedidos <${adminEmail}>`,
+        from: `Trazo Creative Pedidos <${senderEmail}>`,
         to: [adminEmail],
         subject: `Nueva compra en línea - Pedido ${orderId}`,
         html: `
@@ -145,9 +178,9 @@ export async function processEtominPayment(data: any) {
 
       // Correo para Cliente
       const clientOrderEmail = resend.emails.send({
-        from: `Adfinity <${adminEmail}>`,
+        from: `Trazo Creative <${senderEmail}>`,
         to: [data.billing.email],
-        subject: `Confirmación de tu pedido ${orderId} - Adfinity`,
+        subject: `Confirmación de tu pedido ${orderId} - Trazo Creative`,
         html: `
           <div style="font-family: sans-serif; color: #111;">
             <h2>¡Hola, ${data.billing.firstName}! Gracias por tu compra.</h2>
@@ -170,12 +203,12 @@ export async function processEtominPayment(data: any) {
             <p style="font-size: 18px; text-align: right;"><strong>Total pagado: <span style="color: #8DBF15;">${totalFormat} MXN</span></strong></p>
             <br/>
             <p>Si tienes alguna pregunta, responde directamente a este correo.</p>
-            <p>Saludos,<br/><strong>El equipo de Adfinity</strong></p>
+            <p>Saludos,<br/><strong>El equipo de Trazo Creative</strong></p>
           </div>
         `,
       });
 
-      // Enviar de forma asíncrona (sin bloquear la respuesta al usuario)
+      // Enviar de forma asíncrona
       Promise.all([adminOrderEmail, clientOrderEmail]).catch((err) => 
         console.error("Error enviando correos de confirmación:", err)
       );

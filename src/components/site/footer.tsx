@@ -72,7 +72,7 @@ export function Footer() {
           <FooterHead>{f.contactTitle}</FooterHead>
           <div className="mt-5 space-y-1.5 text-sm text-bone/60">
             <a href="tel:+525555530511" className="block transition-colors hover:text-volt">+52 55 5553 0511</a>
-            <a href="mailto:contacto@adfinity.com" className="block transition-colors hover:text-volt">contacto@adfinity.com</a>
+            <a href="mailto:contacto@adfinity.com.mx" className="block transition-colors hover:text-volt">contacto@adfinity.com.mx</a>
           </div>
           <FooterHead className="mt-8">{f.locationTitle}</FooterHead>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-bone/60">

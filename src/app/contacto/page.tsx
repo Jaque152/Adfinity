@@ -42,8 +42,8 @@ export default function ContactoPage() {
                 <ContactRow label={t.contact.labelPhone} value="+52 55 5553 0511" href="tel:+525555530511" />
                 <ContactRow
                   label={t.contact.labelEmail}
-                  value="contacto@adfinity.com"
-                  href="mailto:contacto@adfinity.com"
+                  value="contacto@adfinity.com.mx"
+                  href="mailto:contacto@adfinity.com.mx"
                 />
                 <ContactRow
                   label={t.contact.labelLocation}
