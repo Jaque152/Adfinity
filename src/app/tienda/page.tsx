@@ -114,7 +114,7 @@ export default function TiendaPage() {
                 <PillButton href="/contacto" tone="dark" variant="solid">
                   {t.store.btnCustomStart}
                 </PillButton>
-                <PillButton href="/checkout" tone="dark">
+                <PillButton href="/pago-folio" tone="dark">
                   {t.store.btnCustomPay}
                 </PillButton>
               </div>
