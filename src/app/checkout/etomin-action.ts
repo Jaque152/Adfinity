@@ -107,7 +107,7 @@ export async function processEtominPayment(data: any) {
 
       // Correo para Administrador
       const adminOrderEmail = resend.emails.send({
-        from: `Trazo Creative Pedidos <${adminEmail}>`,
+        from: `Adfinity Pedidos <${adminEmail}>`,
         to: [adminEmail],
         subject: `Nueva compra en línea - Pedido ${orderId}`,
         html: `
@@ -145,9 +145,9 @@ export async function processEtominPayment(data: any) {
 
       // Correo para Cliente
       const clientOrderEmail = resend.emails.send({
-        from: `Trazo Creative <${adminEmail}>`,
+        from: `Adfinity <${adminEmail}>`,
         to: [data.billing.email],
-        subject: `Confirmación de tu pedido ${orderId} - Trazo Creative`,
+        subject: `Confirmación de tu pedido ${orderId} - Adfinity`,
         html: `
           <div style="font-family: sans-serif; color: #111;">
             <h2>¡Hola, ${data.billing.firstName}! Gracias por tu compra.</h2>
@@ -170,7 +170,7 @@ export async function processEtominPayment(data: any) {
             <p style="font-size: 18px; text-align: right;"><strong>Total pagado: <span style="color: #8DBF15;">${totalFormat} MXN</span></strong></p>
             <br/>
             <p>Si tienes alguna pregunta, responde directamente a este correo.</p>
-            <p>Saludos,<br/><strong>El equipo de Trazo Creative</strong></p>
+            <p>Saludos,<br/><strong>El equipo de Adfinity</strong></p>
           </div>
         `,
       });

@@ -94,7 +94,7 @@ export default function Home() {
           </div>
 
           {/* stats */}
-          <div className="mt-20 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-bone/10 bg-bone/10 md:grid-cols-3">
+          <div className="mt-20 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-bone/10 bg-bone/10 md:grid-cols-2">
             {t.home.stats.map((s) => (
               <div key={s.v} className="bg-ink p-6 md:p-8">
                 <div className="font-display text-4xl font-extrabold text-volt md:text-5xl">

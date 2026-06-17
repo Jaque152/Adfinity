@@ -1,4 +1,5 @@
 export type Language = "es" | "en";
+
 export const dictionaries = {
   es: {
     navbar: {
@@ -9,8 +10,44 @@ export const dictionaries = {
     hero: {
       location: "/ agencia creativa — CDMX",
       est: "EST. 2026",
-      tagline: "Ayudamos a marcas a comunicar mejor, crear contenido que conecta y destacar en redes sociales.",
+      giantWord: "CREATIVO",
+      tagline: "Impulsamos a las marcas para que transmitan su mensaje con claridad, creando contenido atractivo que las haga brillar en el entorno digital.",
       btnServices: "Ver servicios",
+    },
+    home: {
+      statementEyebrow: "© Trazo Creative",
+      statementText: "Somos un colectivo creativo dedicado a convertir tus ideas en piezas visuales de alto impacto.",
+      statementSubtext: "Un mismo enfoque. Una meta definida.",
+      btnMore: "Conocer más",
+      stats: [
+        { k: "100%", v: "Trabajo en línea" },
+        { k: "21", v: "Servicios creativos" },
+      ],
+      servicesEyebrow: "/ our solutions",
+      servicesTitle: "Soluciones creativas hechas a la medida de tu negocio.",
+      servicesBtn: "Ver todos los planes",
+      faqEyebrow: "/ faqs",
+      faqTitle: "¿Dudas? Te ayudamos a resolverlas.",
+      faqDesc: "Resolvemos las dudas más comunes. Si necesitas algo más, escríbenos y te respondemos rápido.",
+      faqBtn: "Hablemos",
+      faqs: [
+        {
+          q: "¿Por qué elegirnos frente a otras agencias?",
+          a: "Nuestra prioridad es diseñar piezas visuales genuinas y tácticas que respeten la esencia de tu marca. Huimos de las fórmulas genéricas para enfocarnos directamente en las metas de tu empresa.",
+        },
+        {
+          q: "¿Cuáles son nuestras áreas de especialidad?",
+          a: "Somos expertos en diseño para plataformas sociales, identidad digital, producción audiovisual, planificación de contenidos y complementos estratégicos como creación de slogans, optimización de biografías y auditorías digitales.",
+        },
+        {
+          q: "¿Cuál es nuestro proceso de trabajo?",
+          a: "Operamos de manera completamente remota. Solo tienes que elegir la solución que necesitas, completar el pago, y nuestro equipo creativo pondrá en marcha tu proyecto, asegurando entregas digitales puntuales.",
+        },
+        {
+          q: "¿Qué vas a conseguir al trabajar con nosotros?",
+          a: "Obtendrás material de primer nivel listo para tus redes, una estética impecable y uniforme, una conexión más fuerte con tu comunidad y una huella digital que verdaderamente represente la calidad de tu negocio.",
+        },
+      ]
     },
     checkout: {
       breadcrumbServices: "Servicios",
@@ -70,15 +107,15 @@ export const dictionaries = {
       }
     },
     contact: {
-      giantWord: "HABLEMOS",
-      desc1: "Cada gran proyecto comienza con una conversación. Si tienes una idea, una marca que deseas impulsar o un proyecto que quieres desarrollar, estaremos encantados de escucharte.",
-      desc2: "Nuestro equipo creativo está listo para acompañarte en cada etapa del proceso, desde la conceptualización hasta la producción final. Contáctanos y juntos encontraremos la mejor forma de convertir tu visión en una propuesta que conecte con tu público.",
+      giantWord: "INICIEMOS",
+      desc1: "Las mejores colaboraciones nacen de un simple mensaje. Ya sea que tengas un concepto en mente, busques potenciar tu marca o necesites materializar un proyecto, nos encantaría conocer tu visión.",
+      desc2: "Nuestros creativos te guiarán paso a paso, desde la lluvia de ideas inicial hasta el arte final. Escríbenos para descubrir juntos la estrategia ideal que transformará tus metas en un mensaje poderoso para tu audiencia.",
       writeUs: "/ escríbenos",
       titleForm: "Convierte tu idea en un proyecto real.",
       labelPhone: "Teléfono",
       labelEmail: "Correo",
       labelLocation: "Ubicación",
-      locationValue: "Av. Tamaulipas No. 150, Piso 18, Col. Hipódromo, CDMX.",
+      locationValue: "Av. Tamaulipas No. 150, Piso 18, Int. 1801,Col. Hipódromo, Alcaldía Cuauhtémoc,C.P. 06100, CDMX.",
       ctaTitle: "/ un plan para ti",
       ctaHeading: "¿Ya tienes tu plan? Realiza tu pago aquí y comenzamos.",
       ctaDesc: "Ingresa tus datos, el monto de tu plan y nuestro equipo iniciará tu proyecto de inmediato.",
@@ -104,42 +141,6 @@ export const dictionaries = {
       priceLabel: "Precio",
       customQuote: "Cotización personalizada",
       customQuoteDesc: "Cuéntanos qué tienes en mente y juntos daremos forma a una propuesta creativa pensada para impulsar tu negocio. Recibirás una estimación del costo de producción y podrás iniciar tu proyecto de inmediato."
-    },
-    home: {
-      statementEyebrow: "© Adfinity",
-      statementText: "Un equipo creativo apasionado por transformar ideas en contenido visual que genera impacto.",
-      statementSubtext: "Una sola dirección. Un objetivo claro.",
-      btnMore: "Conocer más",
-      stats: [
-        { k: "100%", v: "Trabajo en línea" },
-        { k: "21", v: "Servicios creativos" },
-        { k: "24/7", v: "Acompañamiento" },
-      ],
-      servicesEyebrow: "/ our solutions",
-      servicesTitle: "Servicios creativos diseñados para tu marca.",
-      servicesBtn: "Ver todos los planes",
-      faqEyebrow: "/ faqs",
-      faqTitle: "¿Tienes preguntas? Aquí las respondemos.",
-      faqDesc: "Resolvemos las dudas más comunes. Si necesitas algo más, escríbenos y te respondemos rápido.",
-      faqBtn: "Hablemos",
-      faqs: [
-        {
-          q: "¿Qué nos diferencia de otras agencias creativas?",
-          a: "Nos enfocamos en crear contenido visual auténtico y estratégico, alineado con la identidad de cada marca. No vendemos paquetes genéricos, trabajamos según los objetivos de tu negocio.",
-        },
-        {
-          q: "¿En qué servicios nos especializamos?",
-          a: "Diseño para redes sociales, branding digital, contenido y video, estrategia de publicaciones y servicios adicionales como slogan, bio profesional y auditoría de perfil.",
-        },
-        {
-          q: "¿Cómo trabajamos con nuestros clientes?",
-          a: "Todo es 100% en línea. Seleccionas tu plan, realizas tu pago y nuestro equipo comienza a trabajar en tu proyecto con entregas digitales en los tiempos acordados.",
-        },
-        {
-          q: "¿Qué resultados puedes esperar?",
-          a: "Contenido profesional listo para publicar, mayor coherencia visual en tus redes, mejor comunicación con tu audiencia y una presencia digital que refleja el valor real de tu marca.",
-        },
-      ]
     },
     components: {
       navbar: {
@@ -179,8 +180,6 @@ export const dictionaries = {
       },
       footer: {
         ctaEyebrow: "/ siguiente nivel",
-        ctaTitle: "¿Listo para llevar tu marca al siguiente nivel?",
-        btnServices: "Ver servicios",
         marquee: ["Diseño", "Branding", "Contenido", "Estrategia", "Video", "Redes"],
         desc: "Agencia creativa especializada en diseño, contenido y estrategia digital para marcas que quieren destacar y conectar con su audiencia.",
         learnMore: "Conocer más ✦",
@@ -189,6 +188,7 @@ export const dictionaries = {
           { href: "/", label: "Home" },
           { href: "/tienda", label: "Servicios" },
           { href: "/contacto", label: "Contacto" },
+          { href: "/checkout", label: "Checkout" },
         ],
         contactTitle: "Contáctanos",
         locationTitle: "Ubicación",
@@ -208,35 +208,37 @@ export const dictionaries = {
       servicesShowcase: [
         {
           num: "01",
-          title: "Diseño para Redes",
-          blurb: "Creamos piezas visuales profesionales listas para publicar, adaptadas al estilo y personalidad de tu marca.",
-          bullets: ["Diseños para post y story", "Plantillas editables", "Portadas y highlights", "Archivos listos para publicar"],
+          title: "Diseño de Redes Sociales",
+          blurb: "Diseñamos gráficos profesionales y listos para usar, perfectamente alineados con la esencia y el tono de tu marca.",
+          bullets: ["Gráficos para publicaciones e historias", "Formatos personalizables", "Portadas y portadas de historias destacadas", "Material gráfico listo para subir"],
           image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1100&q=80",
         },
         {
           num: "02",
-          title: "Branding Digital",
-          blurb: "Definimos la identidad visual de tu marca en redes con coherencia, estilo y propósito.",
-          bullets: ["Paleta de colores y tipografías", "Diseño de portadas para redes", "Kit visual de marca", "Guía básica de uso"],
+          title: "Identidad Digital",
+          blurb: "Construimos la esencia visual de tu marca en internet, dotándola de congruencia, estética y un propósito claro.",
+          bullets: ["Selección de colores y fuentes", "Creación de portadas sociales", "Paquete gráfico de identidad", "Manual esencial de estilo"],
           image: "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=1100&q=80",
         },
         {
           num: "03",
-          title: "Contenido y Video",
-          blurb: "Producimos contenido creativo que conecta con tu audiencia y aumenta tu visibilidad.",
-          bullets: ["Videos cortos tipo reel", "Copys optimizados", "Hashtags sugeridos", "Calendario editorial"],
+          title: "Creación de Video y Contenido",
+          blurb: "Desarrollamos material audiovisual innovador diseñado para enganchar a tu público y multiplicar tu alcance.",
+          bullets: ["Clips en formato vertical (reels/TikToks)", "Textos estratégicos para redes", "Selección de etiquetas clave", "Cronograma de publicaciones"],
           image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1100&q=80",
         },
         {
           num: "04",
-          title: "Estrategia de Publicaciones",
-          blurb: "Planificamos tu comunicación digital con objetivos claros y un calendario estratégico.",
-          bullets: ["Diagnóstico de redes sociales", "Ideas de publicaciones", "Guía de tono de comunicación", "Documento estratégico"],
+          title: "Planificación de Contenido",
+          blurb: "Estructuramos tu presencia online mediante metas concretas y una hoja de ruta bien definida.",
+          bullets: ["Auditoría de perfiles sociales", "Propuestas creativas de contenido", "Definición de voz y tono", "Plan de acción detallado"],
           image: "https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=1100&q=80",
         }
       ]
     }
   },
+  
+  // ====================== ENGLISH VERSION ======================
   en: {
     navbar: {
       services: "Services",
@@ -246,8 +248,44 @@ export const dictionaries = {
     hero: {
       location: "/ creative agency — CDMX",
       est: "EST. 2026",
-      tagline: "We help brands communicate better, create engaging content, and stand out on social media.",
+      giantWord: "CREATIVE",
+      tagline: "We empower brands to convey their message clearly, crafting engaging content that makes them shine in the digital landscape.",
       btnServices: "View services",
+    },
+    home: {
+      statementEyebrow: "© Trazo Creative",
+      statementText: "We are a creative collective dedicated to turning your ideas into high-impact visual assets.",
+      statementSubtext: "One single focus. One defined goal.",
+      btnMore: "Learn more",
+      stats: [
+        { k: "100%", v: "Online workflow" },
+        { k: "21", v: "Creative services" },
+      ],
+      servicesEyebrow: "/ our solutions",
+      servicesTitle: "Creative solutions tailored specifically for your business.",
+      servicesBtn: "View all plans",
+      faqEyebrow: "/ faqs",
+      faqTitle: "Got doubts? We're here to clear them up.",
+      faqDesc: "We resolve the most common questions. If you need anything else, drop us a line and we will reply quickly.",
+      faqBtn: "Let's talk",
+      faqs: [
+        {
+          q: "Why choose us over other agencies?",
+          a: "Our priority is designing genuine, tactical visual assets that respect your brand's essence. We avoid cookie-cutter formulas to focus directly on your company's goals."
+        },
+        {
+          q: "What are our core areas of expertise?",
+          a: "We are experts in social platform design, digital identity, audiovisual production, content planning, and strategic add-ons like slogan creation, bio optimization, and digital audits."
+        },
+        {
+          q: "What is our working process?",
+          a: "We operate completely remotely. Simply choose the solution you need, complete the payment, and our creative team will kickstart your project, ensuring punctual digital deliveries."
+        },
+        {
+          q: "What will you achieve by working with us?",
+          a: "You will get top-tier material ready for your channels, a flawless and uniform aesthetic, a stronger connection with your community, and a digital footprint that truly represents the quality of your business."
+        }
+      ]
     },
     checkout: {
       breadcrumbServices: "Services",
@@ -307,9 +345,9 @@ export const dictionaries = {
       }
     },
     contact: {
-      giantWord: "LET'S TALK",
-      desc1: "Every great project starts with a conversation. If you have an idea, a brand you want to boost, or a project you want to develop, we'll be delighted to hear from you.",
-      desc2: "Our creative team is ready to accompany you through every step of the process, from conceptualization to final production. Contact us and together we will find the best way to turn your vision into a proposal that connects with your audience.",
+      giantWord: "LET'S START",
+      desc1: "The best collaborations start with a simple message. Whether you have a concept in mind, want to boost your brand, or need to bring a project to life, we would love to hear your vision.",
+      desc2: "Our creatives will guide you step by step, from the initial brainstorm to the final artwork. Drop us a line so we can discover the ideal strategy together to transform your goals into a powerful message for your audience.",
       writeUs: "/ write us",
       titleForm: "Turn your idea into a real project.",
       labelPhone: "Phone",
@@ -341,42 +379,6 @@ export const dictionaries = {
       priceLabel: "Price",
       customQuote: "Custom quotation",
       customQuoteDesc: "Tell us what you have in mind and together we will shape a creative proposal designed to boost your business. You will receive a production cost estimate and can start your project immediately."
-    },
-    home: {
-      statementEyebrow: "© Adfinity",
-      statementText: "A creative team passionate about transforming ideas into high-impact visual content.",
-      statementSubtext: "One single direction. One clear goal.",
-      btnMore: "Learn more",
-      stats: [
-        { k: "100%", v: "Online workflow" },
-        { k: "21", v: "Creative services" },
-        { k: "24/7", v: "Support & guidance" },
-      ],
-      servicesEyebrow: "/ our solutions",
-      servicesTitle: "Creative services tailored to your brand.",
-      servicesBtn: "View all plans",
-      faqEyebrow: "/ faqs",
-      faqTitle: "Have questions? We've got answers.",
-      faqDesc: "We resolve the most common questions. If you need anything else, drop us a line and we will reply quickly.",
-      faqBtn: "Let's talk",
-      faqs: [
-        {
-          q: "What sets us apart from other creative agencies?",
-          a: "We focus on creating authentic and strategic visual content, strictly aligned with each brand's identity. We don't sell generic packages; we build upon your unique business goals.",
-        },
-        {
-          q: "What services do we specialize in?",
-          a: "Social media design, digital branding, content and video production, publishing strategy, and add-on services like slogans, professional bios, and profile auditing.",
-        },
-        {
-          q: "How do we work with our clients?",
-          a: "Everything is 100% online. You pick a plan, submit your payment, and our creative team kicks off your project with digital deliveries matching the agreed deadlines.",
-        },
-        {
-          q: "What results can you expect?",
-          a: "Professional, scroll-stopping content ready to publish, bulletproof visual consistency across networks, better connection with your audience, and a digital footprint that screams quality.",
-        },
-      ]
     },
     components: {
       navbar: {
@@ -416,8 +418,6 @@ export const dictionaries = {
       },
       footer: {
         ctaEyebrow: "/ next level",
-        ctaTitle: "Ready to take your brand to the next level?",
-        btnServices: "View services",
         marquee: ["Design", "Branding", "Content", "Strategy", "Video", "Social"],
         desc: "Creative agency specialized in design, content, and digital strategy for brands that want to stand out and connect with their audience.",
         learnMore: "Learn more ✦",
@@ -426,6 +426,7 @@ export const dictionaries = {
           { href: "/", label: "Home" },
           { href: "/tienda", label: "Services" },
           { href: "/contacto", label: "Contact" },
+          { href: "/checkout", label: "Checkout" },
         ],
         contactTitle: "Contact Us",
         locationTitle: "Location",
@@ -446,29 +447,29 @@ export const dictionaries = {
         {
           num: "01",
           title: "Social Media Design",
-          blurb: "We create professional visual pieces ready to publish, tailored to your brand's style and personality.",
-          bullets: ["Post and story designs", "Editable templates", "Covers and highlights", "Ready-to-publish files"],
+          blurb: "We design professional, ready-to-use graphics perfectly aligned with your brand's essence and tone.",
+          bullets: ["Graphics for posts and stories", "Customizable templates", "Covers and highlight icons", "Ready-to-upload graphic assets"],
           image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=1100&q=80",
         },
         {
           num: "02",
-          title: "Digital Branding",
-          blurb: "We define your brand's visual identity on social media with consistency, style, and purpose.",
-          bullets: ["Color palette and typography", "Social media cover design", "Visual brand kit", "Basic usage guide"],
+          title: "Digital Identity",
+          blurb: "We build the visual essence of your brand online, giving it consistency, aesthetics, and a clear purpose.",
+          bullets: ["Color and font selection", "Social media cover creation", "Visual identity package", "Essential style manual"],
           image: "https://images.unsplash.com/photo-1497032205916-ac775f0649ae?auto=format&fit=crop&w=1100&q=80",
         },
         {
           num: "03",
-          title: "Content and Video",
-          blurb: "We produce creative content that connects with your audience and increases your visibility.",
-          bullets: ["Short reel-style videos", "Optimized copy", "Suggested hashtags", "Editorial calendar"],
+          title: "Video & Content Creation",
+          blurb: "We develop innovative audiovisual material designed to hook your audience and multiply your reach.",
+          bullets: ["Vertical short-form clips (Reels/TikToks)", "Strategic social media copy", "Selection of key tags", "Publishing schedule"],
           image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1100&q=80",
         },
         {
           num: "04",
-          title: "Publishing Strategy",
-          blurb: "We plan your digital communication with clear objectives and a strategic calendar.",
-          bullets: ["Social media audit", "Content ideas", "Communication tone guide", "Strategic document"],
+          title: "Content Planning",
+          blurb: "We structure your online presence through concrete goals and a well-defined roadmap.",
+          bullets: ["Social profile audit", "Creative content proposals", "Voice and tone definition", "Detailed action plan"],
           image: "https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&w=1100&q=80",
         }
       ]

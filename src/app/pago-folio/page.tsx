@@ -150,8 +150,8 @@ export default function PagoFolioPage() {
           <div>
             <h3 className="font-display text-xl font-bold text-ink">Contáctanos</h3>
             <div className="mt-4 space-y-2 text-sm text-ink/70">
-              <p>+52 55 5553 0511</p>
-              <p>contacto@trazocreative.com</p>
+              <p>+52 55 5553 0511</p>contacto@adfinity.com.mx
+              <p></p>
             </div>
           </div>
           <div>

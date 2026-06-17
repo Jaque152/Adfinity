@@ -37,7 +37,7 @@ type CartContextType = {
 
 const CartContext = createContext<CartContextType | null>(null);
 
-const STORAGE_KEY = "trazo-cart-v1";
+const STORAGE_KEY = "adfinity-cart-v1";
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);

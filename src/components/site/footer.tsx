@@ -18,15 +18,6 @@ export function Footer() {
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${TEAM_IMG})` }} />
         <div className="absolute inset-0 bg-ink/80" />
         <div className="absolute inset-0 grain" />
-        <div className="container-x relative z-10 flex flex-col items-start gap-8 py-20 md:py-28">
-          <span className="eyebrow text-volt">{f.ctaEyebrow}</span>
-          <h2 className="display max-w-4xl text-balance text-5xl text-bone sm:text-6xl md:text-7xl">
-            {f.ctaTitle}
-          </h2>
-          <PillButton href="/tienda" tone="dark" variant="solid">
-            {f.btnServices}
-          </PillButton>
-        </div>
       </section>
 
       {/* Marquee */}

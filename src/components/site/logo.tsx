@@ -31,7 +31,7 @@ export function Logo({
           tone === "dark" ? "text-bone" : "text-ink",
         )}
       >
-        Trazo<span className="text-volt-deep">Creative</span>
+        Ad<span className="text-volt-deep">finity</span>
       </span>
     </Link>
   );
