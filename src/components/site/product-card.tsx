@@ -59,9 +59,6 @@ export function ProductCard({ product, index }: { product: Product; index: numbe
               </li>
             ))}
           </ul>
-          <p className="mt-4 font-mono text-[10px] uppercase tracking-wider text-bone/50">
-            {product.delivery}
-          </p>
         </div>
       </div>
 

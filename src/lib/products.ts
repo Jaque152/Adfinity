@@ -18,7 +18,6 @@ export type Product = {
   image: string;
   blurb: string;
   includes: string[];
-  delivery: string;
 };
 
 const IMG = (id: string) =>
@@ -75,8 +74,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1542744173-8e7e53415bb0"),
       blurb: "Un punto de partida ágil para que tu marca aparezca en redes con piezas profesionales listas para publicar.",
-      includes: ["4 diseños para post", "2 portadas de destacados", "Paleta base de marca", "Archivos listos para publicar"],
-      delivery: "Entrega 100% online en 5 días hábiles",
+      includes: [
+        "Optimización de perfil en 1 red social",
+        "1 diseño de publicación",
+        "1 texto publicitario",
+        "Guía básica de uso de la cuenta"
+      ],
     },
     {
       id: 92,
@@ -87,8 +90,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1611162617474-5b21e879e113"),
       blurb: "Diseño con personalidad para que tu feed empiece a comunicar con coherencia y estilo.",
-      includes: ["6 diseños para post y story", "Plantillas editables", "Guía rápida de tono visual", "Archivos listos para publicar"],
-      delivery: "Entrega 100% online en 6 días hábiles",
+      includes: [
+        "2 diseños de publicaciones",
+        "Redacción de copys",
+        "Adaptación a formato post y story",
+        "Archivos listos para publicar"
+      ],
     },
     {
       id: 93,
@@ -99,8 +106,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1581291518857-4e27b48ff24e"),
       blurb: "La identidad visual mínima viable: colores, tipografías y un kit que te hace reconocible.",
-      includes: ["Paleta de colores y tipografías", "Mini kit visual de marca", "2 portadas para redes", "Guía básica de uso"],
-      delivery: "Entrega 100% online en 8 días hábiles",
+      includes: [
+        "Diseño de portada para redes sociales",
+        "2 plantillas editables",
+        "Paleta de colores sugerida",
+        "Tipografías recomendadas"
+      ],
     },
     {
       id: 94,
@@ -111,8 +122,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1559028012-481c04fa702d"),
       blurb: "Todo lo necesario para arrancar una estrategia de contenido constante en redes sociales.",
-      includes: ["10 diseños para feed", "Calendario editorial de 2 semanas", "Copys optimizados", "Hashtags sugeridos"],
-      delivery: "Entrega 100% online en 9 días hábiles",
+      includes: [
+        "3 publicaciones diseñadas",
+        "Redacción de textos",
+        "Calendario de publicación sugerido",
+        "Formatos para Instagram y Facebook"
+      ],
     },
     {
       id: 95,
@@ -123,8 +138,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1505373877841-8d25f7d46678"),
       blurb: "Producción de contenido creativo que detiene el scroll y conecta con tu audiencia.",
-      includes: ["2 videos cortos tipo reel", "8 diseños para feed", "Copys y hashtags", "Archivos listos para publicar"],
-      delivery: "Entrega 100% online en 12 días hábiles",
+      includes: [
+        "5 diseños para redes sociales",
+        "1 video corto tipo reel (10 segundos)",
+        "2 copys optimizados",
+        "Hashtags sugeridos"
+      ],
     },
     {
       id: 96,
@@ -135,8 +154,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1467232004584-a241de8bcf5d"),
       blurb: "Un sistema de plantillas editables para que publiques con calidad de agencia, tú mismo.",
-      includes: ["15 plantillas editables", "Sistema visual de marca", "Set de portadas y highlights", "Tutorial de edición"],
-      delivery: "Entrega 100% online en 12 días hábiles",
+      includes: [
+        "6 plantillas editables para redes sociales",
+        "2 versiones para post y story",
+        "Paleta de colores sugerida",
+        "Guía básica de uso"
+      ],
     },
     {
       id: 97,
@@ -147,8 +170,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1517048676732-d65bc937f952"),
       blurb: "El paquete completo para dejar tus redes impecables y consistentes desde el primer día.",
-      includes: ["Kit visual completo de marca", "20 diseños para feed y story", "Calendario editorial mensual", "Guía de comunicación"],
-      delivery: "Entrega 100% online en 14 días hábiles",
+      includes: [
+        "Diseño de portada para redes",
+        "6 plantillas de publicaciones",
+        "2 íconos para highlights",
+        "Guía visual básica de marca"
+      ],
     },
 
     // ---------- Crecimiento digital ----------
@@ -161,8 +188,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1556761175-5973dc0f32e7"),
       blurb: "Refinamos la imagen de tu marca para proyectar confianza y profesionalismo.",
-      includes: ["Auditoría de imagen actual", "Rediseño de portadas y bio", "8 piezas de feed renovadas", "Recomendaciones de mejora"],
-      delivery: "Entrega 100% online en 9 días hábiles",
+      includes: [
+        "Rediseño visual de redes sociales",
+        "Rediseño de 2 plantillas gráficas",
+        "Rediseño de 2 highlights",
+        "Guía visual de publicaciones"
+      ],
     },
     {
       id: 99,
@@ -173,8 +204,11 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1542744095-fcf48d80b0fd"),
       blurb: "Una campaña con concepto, narrativa y piezas pensadas para mover a tu audiencia.",
-      includes: ["Concepto creativo de campaña", "10 piezas gráficas", "Guion de 1 video", "Plan de publicación"],
-      delivery: "Entrega 100% online en 10 días hábiles",
+      includes: [
+        "6 anuncios digitales",
+        "Textos publicitarios",
+        "Propuesta de segmentación de audiencia"
+      ],
     },
     {
       id: 100,
@@ -185,8 +219,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1454165804606-c3d57bc86b40"),
       blurb: "El plan que tu marca necesita para comunicar con dirección y objetivos claros.",
-      includes: ["Diagnóstico de redes sociales", "Definición de objetivos", "Guía de tono de comunicación", "Documento estratégico"],
-      delivery: "Entrega 100% online en 10 días hábiles",
+      includes: [
+        "Diagnóstico de redes sociales",
+        "Definición de objetivos",
+        "Guía de tono de comunicación",
+        "Documento estratégico"
+      ],
     },
     {
       id: 103,
@@ -197,8 +235,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1460925895917-afdab827c52f"),
       blurb: "Analizamos tu presencia digital a fondo y te entregamos un mapa claro de oportunidades.",
-      includes: ["Auditoría de 2 redes sociales", "Análisis de contenido", "Análisis de competencia", "Documento con recomendaciones"],
-      delivery: "Entrega 100% online en 11 días hábiles",
+      includes: [
+        "Auditoría de 2 redes sociales",
+        "Análisis de contenido",
+        "Análisis de competencia",
+        "Documento con recomendaciones"
+      ],
     },
     {
       id: 101,
@@ -209,8 +251,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1486312338219-ce68d2c6f44d"),
       blurb: "Contenido de alto valor: video, diseño y copy trabajando juntos para crecer.",
-      includes: ["4 videos cortos tipo reel", "12 diseños para feed", "Copys optimizados", "Calendario editorial mensual"],
-      delivery: "Entrega 100% online en 14 días hábiles",
+      includes: [
+        "8 diseños para redes sociales",
+        "2 videos cortos tipo reel",
+        "Redacción de contenido",
+        "Calendario editorial de 30 días"
+      ],
     },
     {
       id: 102,
@@ -221,8 +267,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1499951360447-b19be8fe80f5"),
       blurb: "Una página de aterrizaje clara y persuasiva para convertir visitas en clientes.",
-      includes: ["Diseño de landing de 1 sección larga", "Copy orientado a conversión", "Formulario de contacto", "Optimización para móvil"],
-      delivery: "Entrega 100% online en 14 días hábiles",
+      includes: [
+        "Diseño de landing page básico",
+        "3 secciones de contenido",
+        "Formulario de contacto",
+        "Adaptación móvil"
+      ],
     },
     {
       id: 104,
@@ -233,8 +283,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1542435503-956c469947f6"),
       blurb: "Planeamos tu comunicación con un calendario estratégico que mantiene tu marca activa.",
-      includes: ["Diagnóstico de redes", "Ideas de publicaciones mensuales", "Guía de tono de comunicación", "Documento estratégico"],
-      delivery: "Entrega 100% online en 12 días hábiles",
+      includes: [
+        "Estrategia de contenido de 15 días (no renovables)",
+        "12 ideas de publicaciones",
+        "Calendario editorial",
+        "Guía de tono de comunicación"
+      ],
     },
 
     // ---------- Impacto premium ----------
@@ -247,8 +301,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1531403009284-440f080d1e12"),
       blurb: "Un sistema de contenido completo, pensado para posicionar tu marca a largo plazo.",
-      includes: ["Estrategia editorial trimestral", "Líneas de contenido y pilares", "Calendario de 3 meses", "Guía de ejecución"],
-      delivery: "Entrega 100% online en 15 días hábiles",
+      includes: [
+        "Estrategia de contenido de 20 días (no renovables)",
+        "18 ideas de publicaciones",
+        "Guía de comunicación",
+        "Storytelling de marca"
+      ],
     },
     {
       id: 105,
@@ -259,8 +317,11 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1551434678-e076c223a692"),
       blurb: "Definimos la identidad visual completa de tu marca con coherencia, estilo y propósito.",
-      includes: ["Identidad visual completa", "Sistema de marca para redes", "Kit visual y plantillas", "Manual de uso de marca"],
-      delivery: "Entrega 100% online en 16 días hábiles",
+      includes: [
+        "Identidad visual digital",
+        "10 plantillas para redes",
+        "Portadas para redes"
+      ],
     },
     {
       id: 107,
@@ -271,8 +332,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1573497019940-1c28c88b4f3e"),
       blurb: "El video como motor de crecimiento: contenido dinámico que multiplica tu alcance.",
-      includes: ["6 videos cortos tipo reel", "Guiones y storyboard", "Edición profesional", "Estrategia de publicación"],
-      delivery: "Entrega 100% online en 16 días hábiles",
+      includes: [
+        "2 videos promocionales (30 segundos)",
+        "Edición y subtítulos",
+        "Formato vertical para redes",
+        "Guía de publicación"
+      ],
     },
     {
       id: 110,
@@ -283,8 +348,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1552664730-d307ca884978"),
       blurb: "Diseñamos el recorrido completo para convertir desconocidos en clientes fieles.",
-      includes: ["Mapa de funnel completo", "Landing + secuencia de contenido", "Copys para cada etapa", "Plan de medición"],
-      delivery: "Entrega 100% online en 18 días hábiles",
+      includes: [
+        "Diseño de landing page optimizada",
+        "5 creativos publicitarios",
+        "Redacción persuasiva",
+        "Estructura de embudo de ventas"
+      ],
     },
     {
       id: 108,
@@ -295,8 +364,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1556745757-8d76bdb6984b"),
       blurb: "Todo tu ecosistema digital cubierto: identidad, contenido, estrategia y producción.",
-      includes: ["Branding digital completo", "Contenido mensual integral", "Estrategia y calendario", "Acompañamiento creativo"],
-      delivery: "Entrega 100% online en 20 días hábiles",
+      includes: [
+        "Estrategia digital inicial",
+        "15 diseños para redes",
+        "2 videos cortos",
+        "Calendario de contenido de 30 días (no renovables)"
+      ],
     },
     {
       id: 111,
@@ -307,8 +380,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1531538606174-0f90ff5dce83"),
       blurb: "Posicionamiento profundo: definimos quién eres, cómo hablas y por qué te eligen.",
-      includes: ["Plataforma de marca completa", "Arquitectura de mensajes", "Estrategia de posicionamiento", "Guía maestra de marca"],
-      delivery: "Entrega 100% online en 22 días hábiles",
+      includes: [
+        "Estrategia de posicionamiento digital",
+        "Análisis de competencia",
+        "Estrategia de contenido de 30 días (no renovables)",
+        "Guía de comunicación de marca"
+      ],
     },
     {
       id: 109,
@@ -319,8 +396,13 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1556155092-490a1ba16284"),
       blurb: "El paquete definitivo para lanzar o relanzar tu marca con máximo impacto.",
-      includes: ["Concepto y estrategia de lanzamiento", "Campaña creativa completa", "Producción de video y diseño", "Plan de medios y medición"],
-      delivery: "Entrega 100% online en 25 días hábiles",
+      includes: [
+        "Estrategia de lanzamiento online",
+        "15 piezas gráficas",
+        "3 videos promocionales",
+        "Diseño de landing page",
+        "Plan de contenido de 30 días (no renovables)"
+      ],
     },
   ],
 
@@ -336,8 +418,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1542744173-8e7e53415bb0"),
       blurb: "An agile starting point for your brand to appear on social media with professional, ready-to-publish pieces.",
-      includes: ["4 post designs", "2 highlight covers", "Basic brand palette", "Ready-to-publish files"],
-      delivery: "100% online delivery in 5 business days",
+      includes: [
+        "Profile optimization for 1 social network",
+        "1 post design",
+        "1 ad copywriting",
+        "Basic account usage guide"
+      ],
     },
     {
       id: 92,
@@ -348,8 +434,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1611162617474-5b21e879e113"),
       blurb: "Design with personality so your feed starts communicating with consistency and style.",
-      includes: ["6 post and story designs", "Editable templates", "Quick visual tone guide", "Ready-to-publish files"],
-      delivery: "100% online delivery in 6 business days",
+      includes: [
+        "2 post designs",
+        "Copywriting",
+        "Adaptation to post and story formats",
+        "Ready-to-publish files"
+      ],
     },
     {
       id: 93,
@@ -360,8 +450,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1581291518857-4e27b48ff24e"),
       blurb: "The minimum viable visual identity: colors, typography, and a kit that makes you recognizable.",
-      includes: ["Color palette and typography", "Mini visual brand kit", "2 social media covers", "Basic usage guide"],
-      delivery: "100% online delivery in 8 business days",
+      includes: [
+        "Social media cover design",
+        "2 editable templates",
+        "Suggested color palette",
+        "Recommended typography"
+      ],
     },
     {
       id: 94,
@@ -372,8 +466,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1559028012-481c04fa702d"),
       blurb: "Everything you need to kick off a consistent content strategy on social media.",
-      includes: ["10 feed designs", "2-week editorial calendar", "Optimized copy", "Suggested hashtags"],
-      delivery: "100% online delivery in 9 business days",
+      includes: [
+        "3 designed posts",
+        "Copywriting",
+        "Suggested publishing calendar",
+        "Formats for Instagram and Facebook"
+      ],
     },
     {
       id: 95,
@@ -384,8 +482,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1505373877841-8d25f7d46678"),
       blurb: "Production of scroll-stopping creative content that connects with your audience.",
-      includes: ["2 short reel-style videos", "8 feed designs", "Copy and hashtags", "Ready-to-publish files"],
-      delivery: "100% online delivery in 12 business days",
+      includes: [
+        "5 social media designs",
+        "1 short reel-style video (10 seconds)",
+        "2 optimized copys",
+        "Suggested hashtags"
+      ],
     },
     {
       id: 96,
@@ -396,8 +498,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1467232004584-a241de8bcf5d"),
       blurb: "An editable template system so you can publish with agency quality yourself.",
-      includes: ["15 editable templates", "Visual brand system", "Cover and highlights set", "Editing tutorial"],
-      delivery: "100% online delivery in 12 business days",
+      includes: [
+        "6 editable social media templates",
+        "2 versions for post and story",
+        "Suggested color palette",
+        "Basic usage guide"
+      ],
     },
     {
       id: 97,
@@ -408,8 +514,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "arranque",
       image: IMG("1517048676732-d65bc937f952"),
       blurb: "The complete package to leave your social media impeccable and consistent from day one.",
-      includes: ["Complete visual brand kit", "20 feed and story designs", "Monthly editorial calendar", "Communication guide"],
-      delivery: "100% online delivery in 14 business days",
+      includes: [
+        "Social media cover design",
+        "6 post templates",
+        "2 icons for highlights",
+        "Basic visual brand guide"
+      ],
     },
 
     // ---------- Digital Growth ----------
@@ -422,8 +532,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1556761175-5973dc0f32e7"),
       blurb: "We refine your brand's image to project trust and professionalism.",
-      includes: ["Current image audit", "Cover and bio redesign", "8 revamped feed pieces", "Improvement recommendations"],
-      delivery: "100% online delivery in 9 business days",
+      includes: [
+        "Social media visual redesign",
+        "Redesign of 2 graphic templates",
+        "Redesign of 2 highlights",
+        "Visual publishing guide"
+      ],
     },
     {
       id: 99,
@@ -434,8 +548,11 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1542744095-fcf48d80b0fd"),
       blurb: "A campaign with concept, narrative, and pieces designed to move your audience.",
-      includes: ["Creative campaign concept", "10 graphic pieces", "1 video script", "Publishing plan"],
-      delivery: "100% online delivery in 10 business days",
+      includes: [
+        "6 digital ads",
+        "Ad copywriting",
+        "Audience segmentation proposal"
+      ],
     },
     {
       id: 100,
@@ -446,8 +563,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1454165804606-c3d57bc86b40"),
       blurb: "The plan your brand needs to communicate with direction and clear objectives.",
-      includes: ["Social media diagnosis", "Objective definition", "Communication tone guide", "Strategic document"],
-      delivery: "100% online delivery in 10 business days",
+      includes: [
+        "Social media diagnosis",
+        "Objective definition",
+        "Communication tone guide",
+        "Strategic document"
+      ],
     },
     {
       id: 103,
@@ -458,8 +579,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1460925895917-afdab827c52f"),
       blurb: "We deeply analyze your digital presence and deliver a clear map of opportunities.",
-      includes: ["Audit of 2 social networks", "Content analysis", "Competitor analysis", "Recommendations document"],
-      delivery: "100% online delivery in 11 business days",
+      includes: [
+        "Audit of 2 social networks",
+        "Content analysis",
+        "Competitor analysis",
+        "Recommendations document"
+      ],
     },
     {
       id: 101,
@@ -470,8 +595,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1486312338219-ce68d2c6f44d"),
       blurb: "High-value content: video, design, and copy working together to grow.",
-      includes: ["4 short reel-style videos", "12 feed designs", "Optimized copy", "Monthly editorial calendar"],
-      delivery: "100% online delivery in 14 business days",
+      includes: [
+        "8 social media designs",
+        "2 short reel-style videos",
+        "Content copywriting",
+        "30-day editorial calendar"
+      ],
     },
     {
       id: 102,
@@ -482,8 +611,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1499951360447-b19be8fe80f5"),
       blurb: "A clear and persuasive landing page to convert visitors into clients.",
-      includes: ["1 long-form landing page design", "Conversion-oriented copy", "Contact form", "Mobile optimization"],
-      delivery: "100% online delivery in 14 business days",
+      includes: [
+        "Basic landing page design",
+        "3 content sections",
+        "Contact form",
+        "Mobile optimization"
+      ],
     },
     {
       id: 104,
@@ -494,8 +627,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "crecimiento",
       image: IMG("1542435503-956c469947f6"),
       blurb: "We plan your communication with a strategic calendar that keeps your brand active.",
-      includes: ["Social media diagnosis", "Monthly post ideas", "Communication tone guide", "Strategic document"],
-      delivery: "100% online delivery in 12 business days",
+      includes: [
+        "15-day content strategy (non-renewable)",
+        "12 post ideas",
+        "Editorial calendar",
+        "Communication tone guide"
+      ],
     },
 
     // ---------- Premium Impact ----------
@@ -508,8 +645,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1531403009284-440f080d1e12"),
       blurb: "A complete content system designed to position your brand long-term.",
-      includes: ["Quarterly editorial strategy", "Content pillars and lines", "3-month calendar", "Execution guide"],
-      delivery: "100% online delivery in 15 business days",
+      includes: [
+        "20-day content strategy (non-renewable)",
+        "18 post ideas",
+        "Communication guide",
+        "Brand storytelling"
+      ],
     },
     {
       id: 105,
@@ -520,8 +661,11 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1551434678-e076c223a692"),
       blurb: "We define your brand's complete visual identity with consistency, style, and purpose.",
-      includes: ["Complete visual identity", "Social media brand system", "Visual kit and templates", "Brand usage manual"],
-      delivery: "100% online delivery in 16 business days",
+      includes: [
+        "Digital visual identity",
+        "10 social media templates",
+        "Social media covers"
+      ],
     },
     {
       id: 107,
@@ -532,8 +676,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1573497019940-1c28c88b4f3e"),
       blurb: "Video as a growth engine: dynamic content that multiplies your reach.",
-      includes: ["6 short reel-style videos", "Scripts and storyboard", "Professional editing", "Publishing strategy"],
-      delivery: "100% online delivery in 16 business days",
+      includes: [
+        "2 promotional videos (30 seconds)",
+        "Editing and subtitles",
+        "Vertical format for social media",
+        "Publishing guide"
+      ],
     },
     {
       id: 110,
@@ -544,8 +692,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1552664730-d307ca884978"),
       blurb: "We design the complete journey to turn strangers into loyal clients.",
-      includes: ["Complete funnel map", "Landing + content sequence", "Copy for each stage", "Measurement plan"],
-      delivery: "100% online delivery in 18 business days",
+      includes: [
+        "Optimized landing page design",
+        "5 advertising creatives",
+        "Persuasive copywriting",
+        "Sales funnel structure"
+      ],
     },
     {
       id: 108,
@@ -556,8 +708,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1556745757-8d76bdb6984b"),
       blurb: "Your entire digital ecosystem covered: identity, content, strategy, and production.",
-      includes: ["Complete digital branding", "Comprehensive monthly content", "Strategy and calendar", "Creative guidance"],
-      delivery: "100% online delivery in 20 business days",
+      includes: [
+        "Initial digital strategy",
+        "15 social media designs",
+        "2 short videos",
+        "30-day content calendar (non-renewable)"
+      ],
     },
     {
       id: 111,
@@ -568,8 +724,12 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1531538606174-0f90ff5dce83"),
       blurb: "Deep positioning: we define who you are, how you speak, and why they choose you.",
-      includes: ["Complete brand platform", "Messaging architecture", "Positioning strategy", "Master brand guide"],
-      delivery: "100% online delivery in 22 business days",
+      includes: [
+        "Digital positioning strategy",
+        "Competitor analysis",
+        "30-day content strategy (non-renewable)",
+        "Brand communication guide"
+      ],
     },
     {
       id: 109,
@@ -580,8 +740,13 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       tier: "impacto",
       image: IMG("1556155092-490a1ba16284"),
       blurb: "The ultimate package to launch or relaunch your brand with maximum impact.",
-      includes: ["Launch concept and strategy", "Complete creative campaign", "Video and design production", "Media and measurement plan"],
-      delivery: "100% online delivery in 25 business days",
+      includes: [
+        "Online launch strategy",
+        "15 graphic pieces",
+        "3 promotional videos",
+        "Landing page design",
+        "30-day content plan (non-renewable)"
+      ],
     },
   ]
 };

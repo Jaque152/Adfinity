@@ -70,7 +70,6 @@ export default function PagoFolioPage() {
       image: "https://images.unsplash.com/photo-1556745757-8d76bdb6984b?auto=format&fit=crop&w=800&q=80", // Imagen genérica premium
       blurb: `Pago de folio ${form.folio.toUpperCase()} a nombre de ${form.name}.`,
       includes: ["Servicio acordado previamente", "Atención personalizada"],
-      delivery: "Según acuerdo",
     };
 
     // 2. Añadir al carrito global
