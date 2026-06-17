@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* bone background, ink text, volt (electric lime) accent */
+    --background: 45 33% 93%;
+    --foreground: 80 14% 5%;
+    --card: 44 30% 96%;
+    --card-foreground: 80 14% 5%;
+    --popover: 44 30% 96%;
+    --popover-foreground: 80 14% 5%;
+    --primary: 73 87% 55%;
+    --primary-foreground: 80 20% 6%;
+    --secondary: 45 18% 87%;
+    --secondary-foreground: 80 14% 5%;
+    --muted: 45 16% 86%;
+    --muted-foreground: 80 6% 34%;
+    --accent: 73 87% 55%;
+    --accent-foreground: 80 20% 6%;
+    --destructive: 8 72% 48%;
+    --destructive-foreground: 45 33% 95%;
+    --border: 48 14% 80%;
+    --input: 48 14% 80%;
+    --ring: 73 87% 50%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2c22;
+    border-radius: 0;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[1400px] px-5 sm:px-8 lg:px-12;
+  }
+
+  .container-tight {
+    @apply mx-auto w-full max-w-[1100px] px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Tiny tracked technical label */
+  .eyebrow {
+    @apply font-mono text-[11px] font-medium uppercase tracking-[0.28em];
+  }
+
+  /* Headline display utility */
+  .display {
+    font-family: var(--font-syne), sans-serif;
+    font-weight: 800;
+    line-height: 0.92;
+    letter-spacing: -0.02em;
+  }
+
+  /* Pill button base (matches original capsule shape, redesigned) */
+  .pill {
+    @apply relative inline-flex items-center gap-3 rounded-full border px-2 py-2 text-sm font-semibold transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Grain / noise overlay */
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  .grain-fixed::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 60;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* Marquee */
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+  }
+  .animate-marquee-slow {
+    animation: marquee 45s linear infinite;
+  }
+
+  /* Reveal on load */
+  @keyframes reveal-up {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .reveal {
+    opacity: 0;
+    animation: reveal-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Clip reveal for big headings */
+  @keyframes clip-up {
+    from {
+      opacity: 0;
+      transform: translateY(110%) rotate(3deg);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) rotate(0);
+    }
+  }
+  .clip-line {
+    display: inline-block;
+    animation: clip-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .delay-1 { animation-delay: 0.08s; }
+  .delay-2 { animation-delay: 0.16s; }
+  .delay-3 { animation-delay: 0.24s; }
+  .delay-4 { animation-delay: 0.32s; }
+  .delay-5 { animation-delay: 0.4s; }
+  .delay-6 { animation-delay: 0.5s; }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .link-underline:hover {
+    background-size: 100% 1px;
+  }
+}
