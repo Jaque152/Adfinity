@@ -75,7 +75,7 @@ export default function ContactoPage() {
                 </p>
               </div>
               <div className="flex lg:justify-end">
-                <PillButton href="/checkout" tone="dark" variant="solid">
+                <PillButton href="/pago-folio" tone="dark" variant="solid">
                   {t.contact.btnCta}
                 </PillButton>
               </div>

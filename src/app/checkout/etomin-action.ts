@@ -11,7 +11,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const adminEmail = process.env.ADMIN_EMAIL || "contacto@trazocreative.com";
 const senderEmail = process.env.SENDER_EMAIL || "envios@trazocreative.com";
 
-// 1. Definimos la forma estricta de los datos (Reemplazando a los 'any')
+// 1. Definimos la forma estricta de los datos 
 export interface CartItemPayload {
   name: string;
   price: number;

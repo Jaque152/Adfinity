@@ -86,9 +86,9 @@ export function Footer() {
         <div className="container-x flex flex-col items-start justify-between gap-4 py-6 md:flex-row md:items-center">
           <p className="font-mono text-xs text-bone/40">{f.rights}</p>
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-bone/40">
-            <Link href="/" className="transition-colors hover:text-bone">{f.privacy}</Link>
-            <Link href="/" className="transition-colors hover:text-bone">{f.terms}</Link>
-            <Link href="/" className="transition-colors hover:text-bone">{f.refunds}</Link>
+            <Link href="/privacidad" className="transition-colors hover:text-bone">{f.privacy}</Link>
+            <Link href="/terminos" className="transition-colors hover:text-bone">{f.terms}</Link>
+            <Link href="/reembolsos" className="transition-colors hover:text-bone">{f.refunds}</Link>
           </div>
         </div>
       </div>
