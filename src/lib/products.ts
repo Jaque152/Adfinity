@@ -88,7 +88,7 @@ const PRODUCTS_DB: Record<Language, Product[]> = {
       sku: "MAG-002",
       price: 4280,
       tier: "arranque",
-      image: IMG("1611162617474-5b21e879e113"),
+      image: IMG("1542744094-3a31f272c490"),
       blurb: "Diseño con personalidad para que tu feed empiece a comunicar con coherencia y estilo.",
       includes: [
         "2 diseños de publicaciones",
