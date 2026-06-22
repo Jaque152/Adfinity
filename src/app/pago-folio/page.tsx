@@ -24,7 +24,7 @@ const EMPTY: FormState = {
 
 export default function PagoFolioPage() {
   const router = useRouter();
-  const { addItem, clear } = useCart();
+  const { addItem } = useCart();
   const [form, setForm] = useState<FormState>(EMPTY);
   const [errors, setErrors] = useState<Partial<Record<keyof FormState, string>>>({});
 
@@ -54,10 +54,6 @@ export default function PagoFolioPage() {
   function handleSubmit(ev: React.FormEvent) {
     ev.preventDefault();
     if (!validate()) return;
-
-    // Opcional: Limpiar el carrito previo para asegurar que solo pague este folio.
-    // Si deseas permitir que pague otras cosas junto al folio, elimina esta línea.
-    clear();
 
     // 1. Construir el producto a la medida para inyectarlo al carrito
     const customProduct: Product = {
