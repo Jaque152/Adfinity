@@ -8,8 +8,9 @@ const ETOMIN_PASSWORD = process.env.ETOMIN_PASSWORD || "tu_contraseña_etomin";
 
 // Configuración de Resend
 const resend = new Resend(process.env.RESEND_API_KEY);
-const adminEmail = process.env.ADMIN_EMAIL || "contacto@trazocreative.com";
-const senderEmail = process.env.SENDER_EMAIL || "envios@trazocreative.com";
+
+// Tu correo fijo para envíos y recepción (Administrador)
+const senderEmail = "contacto@adfinity.com.mx";
 
 // 1. Definimos la forma estricta de los datos 
 export interface CartItemPayload {
@@ -79,7 +80,7 @@ export async function processEtominPayment(data: EtominPaymentPayload) {
       return { success: false, error: "Error al tokenizar la tarjeta. Verifica los datos." };
     }
 
-    // 3. PROCESAR VENTA (SALE)
+    // 3. PROCESAR VENTA
     const orderId = `TC-${Math.floor(100000 + Math.random() * 900000)}`;
     
     const salePayload = {
@@ -138,10 +139,10 @@ export async function processEtominPayment(data: EtominPaymentPayload) {
       // Formatear Total
       const totalFormat = `$${Number(data.amount).toLocaleString('es-MX', { minimumFractionDigits: 2 })}`;
 
-      // Correo para Administrador
+      // Correo para Administrador 
       const adminOrderEmail = resend.emails.send({
-        from: `Trazo Creative Pedidos <${senderEmail}>`,
-        to: [adminEmail],
+        from: `Adfinity Pedidos <${senderEmail}>`,
+        to: [senderEmail],
         subject: `Nueva compra en línea - Pedido ${orderId}`,
         html: `
           <div style="font-family: sans-serif; color: #111;">
@@ -176,11 +177,11 @@ export async function processEtominPayment(data: EtominPaymentPayload) {
         `,
       });
 
-      // Correo para Cliente
+      // Correo para Cliente 
       const clientOrderEmail = resend.emails.send({
-        from: `Trazo Creative <${senderEmail}>`,
+        from: `Adfinity <${senderEmail}>`,
         to: [data.billing.email],
-        subject: `Confirmación de tu pedido ${orderId} - Trazo Creative`,
+        subject: `Confirmación de tu pedido ${orderId} - Adfinity`,
         html: `
           <div style="font-family: sans-serif; color: #111;">
             <h2>¡Hola, ${data.billing.firstName}! Gracias por tu compra.</h2>
@@ -203,15 +204,20 @@ export async function processEtominPayment(data: EtominPaymentPayload) {
             <p style="font-size: 18px; text-align: right;"><strong>Total pagado: <span style="color: #8DBF15;">${totalFormat} MXN</span></strong></p>
             <br/>
             <p>Si tienes alguna pregunta, responde directamente a este correo.</p>
-            <p>Saludos,<br/><strong>El equipo de Trazo Creative</strong></p>
+            <p>Saludos,<br/><strong>El equipo de Adfinity</strong></p>
           </div>
         `,
       });
 
-      // Enviar de forma asíncrona
-      Promise.all([adminOrderEmail, clientOrderEmail]).catch((err) => 
-        console.error("Error enviando correos de confirmación:", err)
-      );
+
+      const [adminRes, clientRes] = await Promise.all([adminOrderEmail, clientOrderEmail]);
+
+      if (adminRes.error) {
+        console.error("Error de Resend enviando al ADMIN:", adminRes.error);
+      }
+      if (clientRes.error) {
+        console.error("Error de Resend enviando al CLIENTE:", clientRes.error);
+      }
 
       return { success: true, orderId: orderId, redirect: saleData.redirectTo };
     } else {
