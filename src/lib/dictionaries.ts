@@ -15,7 +15,7 @@ export const dictionaries = {
       btnServices: "Ver servicios",
     },
     home: {
-      statementEyebrow: "© Trazo Creative",
+      statementEyebrow: "© Adfinity",
       statementText: "Somos un colectivo creativo dedicado a convertir tus ideas en piezas visuales de alto impacto.",
       statementSubtext: "Un mismo enfoque. Una meta definida.",
       btnMore: "Conocer más",
@@ -253,7 +253,7 @@ export const dictionaries = {
       btnServices: "View services",
     },
     home: {
-      statementEyebrow: "© Trazo Creative",
+      statementEyebrow: "© Adfinity",
       statementText: "We are a creative collective dedicated to turning your ideas into high-impact visual assets.",
       statementSubtext: "One single focus. One defined goal.",
       btnMore: "Learn more",

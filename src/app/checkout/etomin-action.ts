@@ -110,7 +110,7 @@ export async function processEtominPayment(data: EtominPaymentPayload) {
         quantity: item.qty,
         id: item.sku,
       })),
-      redirectUrl: "https://trazocreative.com/checkout"
+      redirectUrl: "https://https://adfinity.com.mx/checkout"
     };
 
     const saleRes = await fetch(`${ETOMIN_BASE_URL}/sale`, {
